@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type anthing slowly</title>
+</head>
+<body>
+<div style="text-align: center">
+<h1>TYPE ANTHING SLOWLY</h1>
+    <input style="height: 100px"  id="game" type="text" onkeyup="play()">
+</div>
+    <script>
+        let i=0;
+        let textvalue="language";
+        let data="";
+        function play(){
+            if(i<textvalue.length){
+                data+=textvalue[i];
+                document.getElementById('game').value=data;
+                i++;
+            }else{
+                i=0;
+                data="";
+                play();
+            }
+        }
+
+    </script>
+</div>
+</body>
+</html>
